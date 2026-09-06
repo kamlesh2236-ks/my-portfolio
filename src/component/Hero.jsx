@@ -635,7 +635,7 @@ const Hero = () => {
           </a>
 
           <a
-            href="https://https://github.com/kamlesh2236-ks"
+            href="https://github.com/kamlesh2236-ks"
             target="_blank"
             rel="noopener noreferrer"
           >
