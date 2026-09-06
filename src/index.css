@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+:root {
+    --bg: #080B14;
+    --bg-soft: #101522;
+
+    --text: #F8FAFF;
+    --extext: #080B14;
+    --text-muted: #A6AEC2;
+
+    --accent: #8B5CF6;
+    --accent-text: #FFFFFF;
+
+    --cyan: #00D9FF;
+    --pink: #FF4ECD;
+    --blue: #5B8CFF;
+
+    --border: rgba(255, 255, 255, 0.10);
+}
+
+
+[data-theme="light"] {
+    --bg: #F7F8FC;
+    --bg-soft: #EEF1F8;
+
+    /* IMPORTANT */
+    --text: #171A2B;
+    --extext: #F7F8FC;
+    --text-muted: #5E6578;
+
+    --accent: #7657E8;
+    --accent-text: #FFFFFF;
+
+    --cyan: #009FC4;
+    --pink: #D946B8;
+    --blue: #536DFE;
+
+    --border: rgba(23, 26, 43, 0.12);
+}

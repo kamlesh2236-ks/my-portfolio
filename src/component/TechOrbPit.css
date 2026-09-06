@@ -1,0 +1,13 @@
+.tech-orb-pit {
+    position: absolute;
+    inset: 0;
+    z-index: 6;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.tech-orb-pit canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
