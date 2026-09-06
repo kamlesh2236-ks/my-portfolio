@@ -605,15 +605,43 @@ const Hero = () => {
         </div>
 
         <div className="social-icons">
-          <FontAwesomeIcon icon={faLinkedinIn} />
 
-          <FontAwesomeIcon icon={faEnvelope} />
+          <a
+            href="https://www.linkedin.com/in/kamlesh-kumar-763367299"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={faLinkedinIn} />
+          </a>
 
-          <FontAwesomeIcon icon={faInstagram} />
+          <a href="mailto:kamleshkumar223678@gmail.com">
+            <FontAwesomeIcon icon={faEnvelope} />
+          </a>
 
-          <FontAwesomeIcon icon={faXTwitter} />
+          <a
+            href="https://www.instagram.com/kumar_k_ks"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={faInstagram} />
+          </a>
 
-          <FontAwesomeIcon icon={faGithub} />
+          <a
+            href="https://x.com/YOUR_USERNAME"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={faXTwitter} />
+          </a>
+
+          <a
+            href="https://https://github.com/kamlesh2236-ks"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={faGithub} />
+          </a>
+
         </div>
       </div>
 

@@ -13,11 +13,11 @@ import "./Footer.css";
 
 
 const socialLinks = [
-    { label: "LinkedIn", href: "https://linkedin.com/", icon: IconBrandLinkedin },
+    { label: "LinkedIn", href: "https://linkedin.com/in/kamlesh-kumar-763367299", icon: IconBrandLinkedin },
     { label: "X", href: "https://x.com/", icon: IconBrandX },
-    { label: "Instagram", href: "https://instagram.com/", icon: IconBrandInstagram },
+    { label: "Instagram", href: "https://instagram.com/kumar_k_ks", icon: IconBrandInstagram },
     { label: "Email", href: "mailto:kamleshkumar223678@gmail.com", icon: IconMail },
-    { label: "GitHub", href: "https://github.com/", icon: IconBrandGithub },
+    { label: "GitHub", href: "github.com/kamlesh2236-ks", icon: IconBrandGithub },
 ];
 
 
