@@ -626,7 +626,7 @@ const Hero = () => {
           </a>
 
           <a
-            href="https://x.com/YOUR_USERNAME"
+            href="https://x.com"
             target="_blank"
             rel="noopener noreferrer"
           >
