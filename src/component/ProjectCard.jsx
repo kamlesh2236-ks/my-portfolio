@@ -14,7 +14,7 @@ const ProjectCard = ({ project, reverse }) => {
       <div className="project-visual">
         <div className="project-stage">
           {/* Tablet */}
-
+          
           <div className="tab-skills">
             <img
               src={project.image}

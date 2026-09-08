@@ -1,11 +1,11 @@
-.project-section .head-container{
+.project-section .head-container {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 12px;
 }
 
-.project-section .head-container::after{
+.project-section .head-container::after {
   content: "";
   position: absolute;
   width: 2px;
@@ -14,7 +14,7 @@
   top: 0;
 }
 
-.head-container h1{
+.head-container h1 {
   font-size: 40px;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-weight: 600;
@@ -38,16 +38,12 @@
     8px 30px 16px;
 
   background:
-    radial-gradient(
-      circle at 10% 20%,
+    radial-gradient(circle at 10% 20%,
       rgba(139, 92, 246, 0.045),
-      transparent 25%
-    ),
-    radial-gradient(
-      circle at 90% 75%,
+      transparent 25%),
+    radial-gradient(circle at 90% 75%,
       rgba(0, 217, 255, 0.035),
-      transparent 25%
-    ),
+      transparent 25%),
     var(--bg);
 
   color: var(--text);
@@ -83,8 +79,7 @@
   display: grid;
 
   grid-template-columns:
-    minmax(0, 1.05fr)
-    minmax(350px, 0.95fr);
+    minmax(0, 1.05fr) minmax(350px, 0.95fr);
 
   align-items: center;
 
@@ -102,8 +97,7 @@
 
 .project-card.reverse {
   grid-template-columns:
-    minmax(350px, 0.95fr)
-    minmax(0, 1.05fr);
+    minmax(350px, 0.95fr) minmax(0, 1.05fr);
 }
 
 
@@ -139,11 +133,9 @@
   border-radius: 50%;
 
   background:
-    linear-gradient(
-      135deg,
+    linear-gradient(135deg,
       var(--project-purple),
-      var(--project-cyan)
-    );
+      var(--project-cyan));
 
   filter: blur(90px);
 
@@ -224,24 +216,19 @@
   z-index: 10;
 
   transition:
-    transform 0.45s cubic-bezier(
-      0.22,
+    transform 0.45s cubic-bezier(0.22,
       1,
       0.36,
-      1
-    );
+      1);
 
   filter:
-    drop-shadow(
-      0 20px 35px rgba(0, 0, 0, 0.35)
-    );
+    drop-shadow(0 20px 35px rgba(0, 0, 0, 0.35));
 }
 
 
 .project-stage:hover .tab-skills {
   transform:
-    translateX(-50%)
-    translateY(-8px);
+    translateX(-50%) translateY(-8px);
 }
 
 
@@ -277,8 +264,7 @@
 
 .tab-skills:hover .content-img {
   filter:
-    brightness(1.04)
-    saturate(1.08);
+    brightness(1.04) saturate(1.08);
 }
 
 
@@ -318,15 +304,12 @@
   top: -40px;
 
   transform:
-    translateX(-50%)
-    translateY(8px);
+    translateX(-50%) translateY(8px);
 
   background:
-    linear-gradient(
-      135deg,
+    linear-gradient(135deg,
       var(--project-purple),
-      var(--project-blue)
-    );
+      var(--project-blue));
 
   padding:
     7px 16px;
@@ -360,8 +343,7 @@
   visibility: visible;
 
   transform:
-    translateX(-50%)
-    translateY(0);
+    translateX(-50%) translateY(0);
 
   box-shadow:
     0 14px 35px rgba(124, 92, 252, 0.4);
@@ -469,12 +451,7 @@
   object-fit: contain;
 
   filter:
-    drop-shadow(
-      0 18px 25px rgba(0, 0, 0, 0.5)
-    )
-    drop-shadow(
-      0 0 18px rgba(139, 92, 246, 0.18)
-    );
+    drop-shadow(0 18px 25px rgba(0, 0, 0, 0.5)) drop-shadow(0 0 18px rgba(139, 92, 246, 0.18));
 
   will-change:
     transform;
@@ -500,13 +477,11 @@
     translateX(-50%);
 
   background:
-    linear-gradient(
-      to bottom,
+    linear-gradient(to bottom,
       transparent,
       var(--project-purple),
       var(--project-cyan),
-      transparent
-    );
+      transparent);
 
   box-shadow:
     0 0 8px var(--project-purple),
@@ -544,7 +519,7 @@
 .pr-text .sub-title {
   font-size: 18px;
   font-weight: 500;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 
@@ -622,13 +597,11 @@
   height: 1px;
 
   background:
-    linear-gradient(
-      90deg,
+    linear-gradient(90deg,
       transparent,
       rgba(139, 92, 246, 0.18),
       rgba(0, 217, 255, 0.18),
-      transparent
-    );
+      transparent);
 }
 
 
@@ -651,8 +624,7 @@
 
   .project-card {
     grid-template-columns:
-      minmax(0, 1fr)
-      minmax(300px, 0.9fr);
+      minmax(0, 1fr) minmax(300px, 0.9fr);
 
     gap: 15px;
   }
@@ -660,8 +632,7 @@
 
   .project-card.reverse {
     grid-template-columns:
-      minmax(300px, 0.9fr)
-      minmax(0, 1fr);
+      minmax(300px, 0.9fr) minmax(0, 1fr);
   }
 
 
@@ -880,5 +851,276 @@
 
   .pr-text h1 {
     font-size: 34px;
+  }
+}
+
+
+/* =========================================================
+   SINGLE MOVING RIG — platform + light saath travel karte hain
+========================================================= */
+/* Scroll ke dauraan light animations turant band */
+.platform-rig.is-scrolling .hard-beam,
+.platform-rig.is-scrolling .platform-flare,
+.platform-rig.is-scrolling .light-particles .dot {
+  animation: none !important;
+  opacity: 0 !important;
+}
+
+.project-section {
+  --project-gold: #ffb347;
+  --project-amber: #ff8a3d;
+}
+
+.platform-rig {
+  position: absolute;
+  width: 440px;
+  height: 180px;
+  left: 0;
+  top: 100px;
+  /* .scroll-platform ka pehla original top:100px yahi rig par shift ho gaya */
+  z-index: 0;
+  pointer-events: none;
+  will-change: transform;
+
+  /* Rig ke andar beams/particles kahan se origin lein
+     (image ke andar jahan glowing ring core hai, usko match karo) */
+  --origin-x: 50%;
+  --origin-y: 55px;
+}
+
+/* Ab img rig ke andar hai, isliye apna top/left reset */
+.platform-rig .scroll-platform {
+  position: absolute;
+  width: 440px;
+  height: auto;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  pointer-events: none;
+  object-fit: contain;
+  filter:
+    drop-shadow(0 18px 25px rgba(0, 0, 0, 0.5)) drop-shadow(0 0 18px rgba(139, 92, 246, 0.18));
+}
+
+.beam-source {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 6;
+  pointer-events: none;
+}
+
+.hard-beam {
+  position: absolute;
+  left: var(--origin-x);
+  top: var(--origin-y);
+  width: 230px;
+  height: 300px;
+  transform-origin: bottom center;
+  clip-path: polygon(0% 0%, 100% 0%, 54% 100%, 46% 100%);
+  background: linear-gradient(to bottom,
+      rgba(255, 179, 71, 0) 0%,
+      rgba(255, 179, 71, 0.55) 50%,
+      rgba(255, 210, 150, 0.85) 100%);
+  filter: blur(4px);
+  mix-blend-mode: screen;
+  opacity: 0;
+  animation: beam-shoot 3.4s ease-in-out infinite;
+}
+
+.hard-beam.b1 {
+  transform: translate(-50%, -100%) rotate(-30deg);
+  animation-delay: 0s;
+}
+
+.hard-beam.b2 {
+  transform: translate(-50%, -100%) rotate(-15deg);
+  animation-delay: 0.5s;
+  width: 200px;
+}
+
+.hard-beam.b3 {
+  transform: translate(-50%, -100%) rotate(0deg);
+  animation-delay: 1s;
+  width: 210px;
+}
+
+.hard-beam.b4 {
+  transform: translate(-50%, -100%) rotate(15deg);
+  animation-delay: 0.5s;
+  width: 200px;
+}
+
+.hard-beam.b5 {
+  transform: translate(-50%, -100%) rotate(30deg);
+  animation-delay: 0s;
+}
+
+@keyframes beam-shoot {
+  0% {
+    opacity: 0;
+  }
+
+  18% {
+    opacity: 0.55;
+  }
+
+  45% {
+    opacity: 0.3;
+  }
+
+  65% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0.1;
+  }
+}
+
+.platform-flare {
+  position: absolute;
+  width: 190px;
+  height: 55px;
+  left: var(--origin-x, 50%);
+  top: var(--origin-y, 55px);
+  transform: translate(-50%, -50%);
+  background: radial-gradient(ellipse,
+      rgba(255, 225, 170, 0.95) 0%,
+      rgba(255, 179, 71, 0.65) 40%,
+      rgba(255, 138, 61, 0.18) 68%,
+      transparent 82%);
+  filter: blur(2px);
+  z-index: 7;
+  pointer-events: none;
+  animation: flare-pulse 3s ease-in-out infinite;
+}
+
+@keyframes flare-pulse {
+
+  0%,
+  100% {
+    opacity: 0.65;
+    transform: translate(-50%, -50%) scaleX(0.92);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scaleX(1.08);
+  }
+}
+
+.light-particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 8;
+  pointer-events: none;
+}
+
+.light-particles .dot {
+  position: absolute;
+  left: var(--origin-x, 50%);
+  top: var(--origin-y, 55px);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: radial-gradient(circle,
+      rgba(255, 230, 190, 1) 0%,
+      rgba(255, 179, 71, 0.7) 60%,
+      transparent 100%);
+  box-shadow: 0 0 6px rgba(255, 179, 71, 0.9);
+  opacity: 0;
+  animation: dot-rise 3.6s ease-in infinite;
+}
+
+.dot:nth-child(1) {
+  left: calc(var(--origin-x, 50%) - 70px);
+  animation-delay: 0s;
+  width: 3px;
+  height: 3px;
+}
+
+.dot:nth-child(2) {
+  left: calc(var(--origin-x, 50%) - 35px);
+  animation-delay: 0.6s;
+}
+
+.dot:nth-child(3) {
+  left: var(--origin-x, 50%);
+  animation-delay: 1.2s;
+  width: 5px;
+  height: 5px;
+}
+
+.dot:nth-child(4) {
+  left: calc(var(--origin-x, 50%) + 35px);
+  animation-delay: 1.8s;
+}
+
+.dot:nth-child(5) {
+  left: calc(var(--origin-x, 50%) + 70px);
+  animation-delay: 2.4s;
+  width: 3px;
+  height: 3px;
+}
+
+.dot:nth-child(6) {
+  left: calc(var(--origin-x, 50%) - 15px);
+  animation-delay: 0.9s;
+}
+
+.dot:nth-child(7) {
+  left: calc(var(--origin-x, 50%) + 55px);
+  animation-delay: 1.5s;
+  width: 3px;
+  height: 3px;
+}
+
+@keyframes dot-rise {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) scale(0.6);
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  60% {
+    opacity: 0.7;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(var(--drift, 12px), -260px) scale(1.1);
+  }
+}
+
+.dot:nth-child(odd) {
+  --drift: -14px;
+}
+
+.dot:nth-child(even) {
+  --drift: 16px;
+}
+
+@media (max-width: 600px) {
+  .platform-rig {
+    width: 330px;
+    height: 165px;
+  }
+
+  .platform-rig .scroll-platform {
+    width: 330px;
+  }
+
+  .hard-beam {
+    height: 220px;
+    width: 170px;
   }
 }
