@@ -203,26 +203,21 @@
 
 .tab-skills {
   position: absolute;
-
   width: 410px;
   height: 258px;
-
   left: 50%;
   top: 15px;
 
-  transform:
-    translateX(-50%);
+  /* PEHLE tha: transform: translateX(-50%); — ab isse replace karo: */
+  transform: translateX(calc(-50% + var(--slide-x, 0px)));
+  opacity: var(--tab-opacity, 1);
+  transition:
+    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.5s ease;
 
   z-index: 10;
 
-  transition:
-    transform 0.45s cubic-bezier(0.22,
-      1,
-      0.36,
-      1);
-
-  filter:
-    drop-shadow(0 20px 35px rgba(0, 0, 0, 0.35));
+  filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.35));
 }
 
 

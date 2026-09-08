@@ -10,10 +10,12 @@ import skillPlatform from "../assets/skill_platform_light_on.svg";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const SLIDE_DISTANCE = 160; // px — tab kitni door se slide karke aayega
+
 const Projects = () => {
 
   const sectionRef = useRef(null);
-  const platformRef = useRef(null); // WRAPPER (rig) — platform image + light dono isi ke andar
+  const platformRef = useRef(null); // platform image + light rig
 
   useLayoutEffect(() => {
 
@@ -23,8 +25,45 @@ const Projects = () => {
     if (!section || !platform) return;
 
     const stages = section.querySelectorAll(".project-stage");
+    const tabs = section.querySelectorAll(".tab-skills");
 
-    if (!stages.length) return;
+    if (!stages.length || !tabs.length) return;
+
+
+    // ---------- Tab visibility helpers ----------
+
+    // reverse cards (odd index) ka tab right se, normal (even index) left se aata hai
+    const tabSide = (i) => (i % 2 !== 0 ? "right" : "left");
+
+    const hideTab = (i) => {
+      const tab = tabs[i];
+      if (!tab) return;
+      const side = tabSide(i);
+
+      tab.style.setProperty(
+        "--slide-x",
+        side === "left" ? `-${SLIDE_DISTANCE}px` : `${SLIDE_DISTANCE}px`
+      );
+      tab.style.setProperty("--tab-opacity", "0");
+      tab.style.pointerEvents = "none";
+    };
+
+    const showTab = (i) => {
+      const tab = tabs[i];
+      if (!tab) return;
+
+      tab.style.setProperty("--slide-x", "0px");
+      tab.style.setProperty("--tab-opacity", "1");
+      tab.style.pointerEvents = "auto";
+    };
+
+    // Initial state: sirf pehla tab visible, baaki sab apni side pe hidden
+    tabs.forEach((tab, i) => {
+      i === 0 ? showTab(0) : hideTab(i);
+    });
+
+
+    // ---------- Platform movement ----------
 
     const movePlatform = (stage) => {
 
@@ -47,7 +86,6 @@ const Projects = () => {
     };
 
 
-    // Initial position — pehle stage ke paas, light ON (koi transition nahi ho rahi)
     const firstPosition = movePlatform(stages[0]);
 
     gsap.set(platform, {
@@ -71,13 +109,25 @@ const Projects = () => {
 
         scrub: 1.5,
 
-        // Transition shuru → light OFF
-        onEnter: () => platform.classList.add("is-scrolling"),
-        onEnterBack: () => platform.classList.add("is-scrolling"),
+        // ---- Forward scroll: (index - 1) -> index ----
+        onEnter: () => {
+          platform.classList.add("is-scrolling");
+          hideTab(index - 1); // pichla tab retreat/hide
+        },
+        onLeave: () => {
+          platform.classList.remove("is-scrolling");
+          showTab(index); // platform pahuncha -> naya tab slide-in
+        },
 
-        // Transition khatam, platform stage pe settle → light ON
-        onLeave: () => platform.classList.remove("is-scrolling"),
-        onLeaveBack: () => platform.classList.remove("is-scrolling"),
+        // ---- Backward scroll: index -> (index - 1) ----
+        onEnterBack: () => {
+          platform.classList.add("is-scrolling");
+          hideTab(index); // current tab retreat/hide
+        },
+        onLeaveBack: () => {
+          platform.classList.remove("is-scrolling");
+          showTab(index - 1); // platform wapas pahuncha -> purana tab slide-in
+        },
 
         onUpdate: (self) => {
           const previousStage = stages[index - 1];
@@ -106,7 +156,6 @@ const Projects = () => {
     ScrollTrigger.refresh();
 
 
-    // Resize par position recalculate
     const handleResize = () => {
       const position = movePlatform(stages[0]);
 
