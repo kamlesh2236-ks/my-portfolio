@@ -22,7 +22,7 @@ import reactSvg from "../assets/react.svg";
 import nodeSvg from "../assets/nodejs.svg";
 import mongoSvg from "../assets/mongo.svg";
 import expressSvg from "../assets/express.svg";
-import blackimg from "../assets/blackmy.png"
+import blackimg from "../assets/blackmy.png";
 
 import TechOrbPit from "./TechOrbPit";
 
@@ -605,7 +605,6 @@ const Hero = () => {
         </div>
 
         <div className="social-icons">
-
           <a
             href="https://www.linkedin.com/in/kamlesh-kumar-763367299"
             target="_blank"
@@ -641,7 +640,6 @@ const Hero = () => {
           >
             <FontAwesomeIcon icon={faGithub} />
           </a>
-
         </div>
       </div>
 
@@ -670,10 +668,10 @@ const Hero = () => {
 
               <div className="about-left">
                 <p>
-                  I help business owners and busy web developers to design &amp;
-                  develop creative websites that fits their vision and attracts
-                  the visitors to stay for ever. Technologies and tools that I
-                  use to create such awesome websites.
+                  I’m a passionate MERN Stack Developer focused on building
+                  modern, scalable, and responsive web applications. I enjoy
+                  turning ideas into clean, functional digital experiences using
+                  MongoDB, Express.js, React, and Node.js.
                 </p>
 
                 <div className="skills">

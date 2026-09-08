@@ -476,7 +476,7 @@
     width: 90%;
     max-width: 1000px;
 
-    max-height: 90vh;
+    max-height: 95vh;
 
     overflow-y: auto;
 
@@ -582,7 +582,7 @@
 
 .about-left p {
     font-size: 15px;
-
+    font-weight: 600;
     line-height: 1.75;
 
     color: var(--text-muted);
@@ -618,6 +618,7 @@
         border-color 0.25s ease,
         color 0.25s ease,
         background 0.25s ease;
+        margin: 0 0 2px;
 }
 
 .skills p:hover {
