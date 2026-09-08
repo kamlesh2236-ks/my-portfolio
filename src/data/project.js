@@ -65,7 +65,7 @@ export const projects = [
   {
     id: 4,
     title: "Manorma Gita College of Pharmacy",
-    titleColor: "#00574a",
+    titleColor: "linear-gradient(135deg, #007a68 0%, #00e5c0 100%)",
     subtitle: "(Pharmaceutical Education & Career Development Platform)",
 
     description:
