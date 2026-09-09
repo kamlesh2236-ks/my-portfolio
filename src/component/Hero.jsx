@@ -473,9 +473,9 @@ const Hero = () => {
       <div className="cursor-glow" ref={glowRef} />
 
       {/* ================================================= BACKGROUND ORBS ================================================= */}
-      {/* <div className="bg-orb orb-one" />
+      <div className="bg-orb orb-one" />
 
-      <div className="bg-orb orb-two" /> */}
+      <div className="bg-orb orb-two" />
 
       {/* ================================================= TECH ORB ================================================= */}
       <TechOrbPit mouseRef={mouseRef} />
