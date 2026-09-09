@@ -73,8 +73,8 @@ const TechOrbPit = ({ mouseRef }) => {
         World.add(world, walls);
 
         const balls = LOGOS.map((logo) => {
-            const minRadius = Math.max(12, Math.min(24, width * 0.035));
-            const maxRadius = Math.max(16, Math.min(32, width * 0.055));
+            const minRadius = Math.max(12, Math.min(24, width * 0.045));
+            const maxRadius = Math.max(16, Math.min(32, width * 0.065));
 
             const r = Common.random(minRadius, maxRadius);
             const x = Common.random(r, width - r);

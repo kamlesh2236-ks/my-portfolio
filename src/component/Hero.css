@@ -888,12 +888,6 @@
         padding-right: 28px;
     }
 
-    .name-logo {
-        width: 90vw;
-
-        opacity: 0.08;
-    }
-
     .mid-section-text h1 {
         max-width: 100%;
     }
@@ -976,12 +970,8 @@
     }
 
     .name-logo {
-        top: 47%;
-        left: 50%;
-
-        width: 110vw;
-
-        opacity: 0.055;
+        top: 42%;
+        left: 9%;
     }
 
     .social-icons {
@@ -1131,13 +1121,13 @@
 
 /* Dark mode */
 .hero-section .hero-contour-ui {
-    opacity: 0.65;
+    opacity: 1;
 }
 
 
 /* Light mode */
 [data-theme="light"] .hero-contour-ui {
-    opacity: 0.22;
+    opacity: 1;
 }
 
 
@@ -1145,11 +1135,12 @@
 @media (max-width: 700px) {
 
     .hero-contour-ui {
-        opacity: 0.3;
+        opacity: 1;
     }
 
     .hero-contour-ui svg {
         width: 170%;
-        transform: translateX(-25%);
+        height: 143vh;
+        transform: translateX(-10%);
     }
 }
