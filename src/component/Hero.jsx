@@ -473,9 +473,9 @@ const Hero = () => {
       <div className="cursor-glow" ref={glowRef} />
 
       {/* ================================================= BACKGROUND ORBS ================================================= */}
-      <div className="bg-orb orb-one" />
+      {/* <div className="bg-orb orb-one" />
 
-      <div className="bg-orb orb-two" />
+      <div className="bg-orb orb-two" /> */}
 
       {/* ================================================= TECH ORB ================================================= */}
       <TechOrbPit mouseRef={mouseRef} />
@@ -531,8 +531,8 @@ const Hero = () => {
         <div className="name-logo">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="635px"
-            height="408px"
+            width="600"
+            height="600"
             viewBox="0 0 512 512"
             preserveAspectRatio="xMidYMid meet"
           >

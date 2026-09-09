@@ -974,6 +974,11 @@
         left: 9%;
     }
 
+    .name-logo svg{
+        width: 635px;
+        height: 408px;
+    }
+
     .social-icons {
         position: absolute;
 
@@ -1121,13 +1126,13 @@
 
 /* Dark mode */
 .hero-section .hero-contour-ui {
-    opacity: 1;
+    opacity: 0.6;
 }
 
 
 /* Light mode */
 [data-theme="light"] .hero-contour-ui {
-    opacity: 1;
+    opacity: 0.5;
 }
 
 
