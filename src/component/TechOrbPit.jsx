@@ -73,7 +73,10 @@ const TechOrbPit = ({ mouseRef }) => {
         World.add(world, walls);
 
         const balls = LOGOS.map((logo) => {
-            const r = Common.random(24, 38);
+            const minRadius = Math.max(12, Math.min(24, width * 0.035));
+            const maxRadius = Math.max(16, Math.min(32, width * 0.055));
+
+            const r = Common.random(minRadius, maxRadius);
             const x = Common.random(r, width - r);
             const y = Common.random(r, height - r);
             const body = Bodies.circle(x, y, r, {
@@ -86,9 +89,16 @@ const TechOrbPit = ({ mouseRef }) => {
         });
         World.add(world, balls);
 
-        const attractorBody = Bodies.circle(width / 2, height / 2, 34, {
-            isStatic: true,
-        });
+        const attractorRadius = Math.max(14, Math.min(34, width * 0.05));
+
+        const attractorBody = Bodies.circle(
+            width / 2,
+            height / 2,
+            attractorRadius,
+            {
+                isStatic: true,
+            }
+        );
         World.add(world, attractorBody);
 
         const runner = Runner.create();
@@ -148,8 +158,13 @@ const TechOrbPit = ({ mouseRef }) => {
             });
 
             ctx.beginPath();
-            ctx.arc(attractorBody.position.x, attractorBody.position.y, 34, 0, Math.PI * 2);
-            ctx.fillStyle = "#050505";
+            ctx.arc(
+                attractorBody.position.x,
+                attractorBody.position.y,
+                attractorRadius,
+                0,
+                Math.PI * 2
+            ); ctx.fillStyle = "#050505";
             ctx.fill();
 
             rafId = requestAnimationFrame(draw);
