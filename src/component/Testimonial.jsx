@@ -92,8 +92,6 @@ const Testimonial = () => {
     };
 
 
-    /* Delay adding "enter-active" by 2 frames so the browser
-       paints the incoming card at its start position first. */
     useEffect(() => {
 
         if (nextIndex === null) return;

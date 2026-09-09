@@ -10,7 +10,7 @@ import skillPlatform from "../assets/skill_platform_light_on.svg";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const SLIDE_DISTANCE = 160; // px — tab kitni door se slide karke aayega
+const SLIDE_DISTANCE = 160;
 
 const Projects = () => {
 
@@ -32,7 +32,6 @@ const Projects = () => {
 
     // ---------- Tab visibility helpers ----------
 
-    // reverse cards (odd index) ka tab right se, normal (even index) left se aata hai
     const tabSide = (i) => (i % 2 !== 0 ? "right" : "left");
 
     const hideTab = (i) => {
@@ -57,7 +56,6 @@ const Projects = () => {
       tab.style.pointerEvents = "auto";
     };
 
-    // Initial state: sirf pehla tab visible, baaki sab apni side pe hidden
     tabs.forEach((tab, i) => {
       i === 0 ? showTab(0) : hideTab(i);
     });
@@ -109,24 +107,22 @@ const Projects = () => {
 
         scrub: 1.5,
 
-        // ---- Forward scroll: (index - 1) -> index ----
         onEnter: () => {
           platform.classList.add("is-scrolling");
-          hideTab(index - 1); // pichla tab retreat/hide
+          hideTab(index - 1);
         },
         onLeave: () => {
           platform.classList.remove("is-scrolling");
-          showTab(index); // platform pahuncha -> naya tab slide-in
+          showTab(index);
         },
 
-        // ---- Backward scroll: index -> (index - 1) ----
         onEnterBack: () => {
           platform.classList.add("is-scrolling");
-          hideTab(index); // current tab retreat/hide
+          hideTab(index);
         },
         onLeaveBack: () => {
           platform.classList.remove("is-scrolling");
-          showTab(index - 1); // platform wapas pahuncha -> purana tab slide-in
+          showTab(index - 1);
         },
 
         onUpdate: (self) => {
@@ -195,7 +191,6 @@ const Projects = () => {
         ))}
       </div>
 
-      {/* SINGLE MOVING PLATFORM + ITS LIGHT — sab saath move karte hain */}
       <div ref={platformRef} className="platform-rig">
 
         <div className="platform-flare"></div>

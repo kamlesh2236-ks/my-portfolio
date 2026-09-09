@@ -1,3 +1,10 @@
+:root{
+   --project-purple: #8b5cf6;
+  --project-cyan: #00d9ff;
+  --project-pink: #ff4ecd;
+  --project-blue: #5b8cff;
+}
+
 .project-section .head-container {
   display: flex;
   justify-content: center;
@@ -24,12 +31,17 @@
   border-radius: 5px;
 }
 
-.project-section {
-  --project-purple: #8b5cf6;
-  --project-cyan: #00d9ff;
-  --project-pink: #ff4ecd;
-  --project-blue: #5b8cff;
+@media (max-width: 600px) {
+  .head-container h1{
+    font-size: 26px;
+  }
 
+  .project-section .head-container::after{
+    height: 43px;
+  }
+}
+
+.project-section {
   position: relative;
 
   width: 100%;
@@ -207,8 +219,6 @@
   height: 258px;
   left: 50%;
   top: 15px;
-
-  /* PEHLE tha: transform: translateX(-50%); — ab isse replace karo: */
   transform: translateX(calc(-50% + var(--slide-x, 0px)));
   opacity: var(--tab-opacity, 1);
   transition:
@@ -226,10 +236,6 @@
     translateX(-50%) translateY(-8px);
 }
 
-
-/* =========================================================
-   WEBSITE IMAGE
-========================================================= */
 
 .tab-skills .content-img {
   position: absolute;
@@ -538,7 +544,7 @@
 }
 
 
-/* =========================================================
+/* =======================================================
    PROJECT DIVIDER
 ========================================================= */
 
@@ -812,11 +818,6 @@
   }
 }
 
-
-/* =========================================================
-   SINGLE MOVING RIG — platform + light saath travel karte hain
-========================================================= */
-/* Scroll ke dauraan light animations turant band */
 .platform-rig.is-scrolling .hard-beam,
 .platform-rig.is-scrolling .platform-flare,
 .platform-rig.is-scrolling .light-particles .dot {
@@ -835,18 +836,14 @@
   height: 180px;
   left: 0;
   top: 100px;
-  /* .scroll-platform ka pehla original top:100px yahi rig par shift ho gaya */
   z-index: 0;
   pointer-events: none;
   will-change: transform;
-
-  /* Rig ke andar beams/particles kahan se origin lein
-     (image ke andar jahan glowing ring core hai, usko match karo) */
   --origin-x: 50%;
   --origin-y: 55px;
 }
 
-/* Ab img rig ke andar hai, isliye apna top/left reset */
+
 .platform-rig .scroll-platform {
   position: absolute;
   width: 440px;
